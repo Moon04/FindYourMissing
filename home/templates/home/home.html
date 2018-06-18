@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Find Your Missing.....</title>
+        {% load staticfiles %}
+        <link rel="icon" type="image/gif/png" href="{% static 'home/assets/images/icons/search.ico'%}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Fonts Link -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+
+        <!-- Bootstrap CSS Link -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+        <!-- CSS -->
+        <link href="{% static 'home/css/home.css' %}" rel="stylesheet" type="text/css">
+
+        <!-- JS -->
+        <script src="{% static 'home/assets/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery-1.12.0.min.js' %}"></script>
+    </head>
+
+    <body>
+
+        <!--NavBare-->
+       <ul class="navBar">
+
+            <li class="selected">
+                <a href="{% url  'home:home' %}">Home</a>
+            </li>
+            <li>
+                <a href="about">About</a>
+            </li>
+            <li>
+                <a href="contact">Contact Us</a>
+            </li>
+            <li>
+                <a href="donate">Donate</a>
+            </li>
+            <li class="liRight">
+                <a href="{% url 'home:register' %}">Register</a>
+            </li>
+            <li class="liRight">
+                <a href="{% url 'home:login' %}">Login</a>
+            </li>
+
+        </ul>
+
+
+        <div class="site" id="page">
+            <a class="skip-link sr-only" href="#main">Skip to content</a>
+
+            <!-- Options headline effects: .rotate | .slide | .zoom | .push | .clip -->
+            <section class="hero-section hero-section--image clearfix clip">
+                <div class="hero-section__wrap">
+                    <div class="hero-section__option">
+                        <img src="{% static 'home/assets/1.jpg' %}" alt="Hero section image">
+                    </div>
+                    <!-- .hero-section__option -->
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="offset-lg-2 col-lg-8">
+                                <div class="title-01 title-01--11 text-center">
+                                    <h1 class="title__heading">
+                                        <span></span>
+                                        <strong class="hero-section__words">
+                                            <span class="title__effect is-visible">Missing!</span>
+                                            <span class="title__effect">Report</span>
+                                            <span class="title__effect">Find</span>
+                                        </strong>
+                                    </h1>
+                                    <div class="title__description">Sometimes, Only one person is missing,<br> and the whole WORLD seems depopulated...</div>
+
+                                    <!-- Options btn color: .btn-success | .btn-info | .btn-warning | .btn-danger | .btn-primary -->
+                                    <div class="title__action"><a href="{% url 'home:register' %}" class="btn btn-success">Register</a></div>
+                                    <div class="title__action"><a href="{% url 'home:login' %}" class="btn btn-success">Login</a></div>
+                                </div> <!-- .title-01 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+
+        <!-- JS -->
+        <script src="{% static 'home/assets/js/plugins/animate-headline.js' %}"></script>
+        <script src="{% static 'home/assets/js/main.js' %}"></script>
+
+         <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+
+
+
+

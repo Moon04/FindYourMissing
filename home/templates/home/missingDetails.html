@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Find Your Missing.....</title>
+        {% load staticfiles %}
+        <link rel="icon" type="image/gif/png" href="{% static 'home/assets/images/icons/search.ico'%}">
+        <link rel="icon" type="image/gif/png" href="{% static 'home/assets/images/icons/search.ico'%}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Fonts Link -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+
+        <!-- Bootstrap CSS Link -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+        <!-- CSS -->
+        <link href="{% static 'home/css/home.css' %}" rel="stylesheet" type="text/css">
+
+        <!-- JS -->
+        <script src="{% static 'home/assets/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery-1.12.0.min.js' %}"></script>
+    </head>
+
+    <body background="{% static 'home/assets/3.png' %}">
+
+        <!--NavBare-->
+       <ul class="navBar">
+
+
+            <li class="selected">
+                <a href="home">Home</a>
+            </li>
+            <li>
+                <a href="about">About</a>
+            </li>
+            <li>
+                <a href="contact">Contact Us</a>
+            </li>
+            <li>
+                <a href="donate">Donate</a>
+            </li>
+            <li class="liRight">
+                <a href="home/register">Register</a>
+            </li>
+            <li class="liRight">
+                <a href="home/login">Login</a>
+            </li>
+
+        </ul>
+
+
+
+
+
+        <center><font color="red"><h1>Missing Person</h1></font></center>
+        <center><h2>{{ MissingPerson.FirstName, MissingPerson.SecondName }}</h2></center>
+        <img src = "MissingPerson.MissingPersonImage">
+        <h3>{{ Age: MissingPerson.AgeBeforeMissing }}</h3>
+        <h3>{{ Sex: MissingPerson.Sex }}</h3>
+        <h3>{{ Hair: MissingPerson.HairColour }}</h3>
+        <h3>{{ Eyes: MissingPerson.EyesColour }}</h3>
+        <h3>{{ Weight: MissingPerson.Weight }}</h3>
+        <h3>{{ Height: MissingPerson.Height }}</h3>
+        <br>
+        <br>
+        <h3>{{ Date Of Birth: MissingPerson.DateOfBirth }}</h3>
+        <h3>{{ Missing From: MissingPerson.MissingFrom }}</h3>
+        <h3>{{ Missing Since: MissingPerson.MissingDate }}</h3>
+        <p>{{ Details: MissingPerson.Details }}</p>
+
+
+
+         <!-- JS -->
+        <script src="{% static 'home/assets/js/plugins/animate-headline.js' %}"></script>
+        <script src="{% static 'home/assets/js/main.js' %}"></script>
+
+         <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+
+
+
+

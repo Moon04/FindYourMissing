@@ -1,0 +1,10 @@
+{% if all_Mprofiles %}
+    <h2>Here Are All Profiles</h2>
+    <ul>
+        {% for mprofile in object_list %}
+        <li><a href="home/logedin/m/{{ mprofile.id }}/"> {{ mprofile.id }} </a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>There is no Profiles</h3>
+{% endif %}

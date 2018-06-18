@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Missing Form</title>
+
+	<link rel="stylesheet" type="text/css" href="reg.css">
+	<!--bootstrap css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/navbar.css'%}">
+	<link rel="icon" type="image/gif/png" href="{% static 'home/assets/images/icons/search.ico'%}">
+
+
+
+</head>
+<body>
+
+
+	 <!--NavBare-->
+       <ul class="navBar">
+
+            <li class="selected">
+                <a href="{% url  'home:home' %}">Home</a>
+            </li>
+            <li>
+                <a href="about">About</a>
+            </li>
+
+            <li>
+                <a href="contact">Contact Us</a>
+            </li>
+            <li>
+                <a href="donate">Donate</a>
+            </li>
+
+
+        </ul>
+
+
+	<div class="container">
+		<img src="{% static 'home/assets/3.png' %}" style="float:right;">
+		<div class="row">
+			<div class="row-xs-12 ">
+				<br>
+				<h2 id="title">Report Missing Form</h2>
+				{% if error_message %}
+					<p><strong>{{ error_message }}</strong></p>
+				{% endif %}
+				<br>
+				<br>
+					<form action="" method="post">
+						{% csrf_token %}
+                        {% include 'home/form_template.html' %}
+					<!--<div class="form-group">
+						<label for="mFName">First Name</label>
+						<input type="text" class="form-control" id="mFName" placeholder="Your Kid's First Name..">
+					</div>
+
+					<div class="form-group">
+						<label for="mSNAme">Second Name</label>
+						<input type="text" class="form-control" id="mSNAme" placeholder="Your Kid's Second Name.. ">
+					</div>
+
+					<div class="form-group">
+						<label for="FoundDate">Date Of Birth</label>
+						<input type="date" class="form-control" id="FoundDate" placeholder="DD/MM/YYY">
+					</div>
+					<div class="form-group">
+						<label for="age">Age Before Missing</label>
+						<input type="text" class="form-control" id="age" placeholder="Your Kid's Second Name.. ">
+					</div>
+					<div class="form-group">
+						<label for="mdate">Missing Date</label>
+						<input type="text" class="form-control" id="mdate" placeholder="DD/MM/YYY">
+					</div>
+					<div class="form-group">
+						<label for="mfrom">Missing From</label>
+						<input type="text" class="form-control" id="mfrom" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="mhair">Hair Color</label>
+						<input type="text" class="form-control" id="mhair" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="meyes">Eye Color</label>
+						<input type="text" class="form-control" id="meyes" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="mheight">Height</label>
+						<input type="text" class="form-control" id="mheight" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="mweight">Weight</label>
+						<input type="text" class="form-control" id="mweight" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="mrelID">Relative ID</label>
+						<input type="text" class="form-control" id="mrelID" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="mrel">Relative Relation</label>
+						<input type="text" class="form-control" id="mrel" placeholder="">
+					</div>
+
+
+					<label class="radio-inline"><input type="radio" name="optradio">Male</label>
+					<label class="radio-inline"><input type="radio" name="optradio">Female</label>
+
+
+					<!--upload file
+					<div class="form-group">
+						<label for="file-upload">Upload Image </label>
+						<br>
+						<input type="file"  id="file-upload">
+					</div>
+					<div class="form-group">
+						<label for="Details">Details</label>
+						<textarea rows="4" cols="50"   class="form-control" id="Details" placeholder="please mention more details for more help, thank you "></textarea>
+					</div>-->
+					<div class="form-group">
+						<a href="{% url  'home:logedin' %}">
+							<input type="submit" class="btn btn-delault" id="login"
+						value="Add To Missing Database">  </a>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	 <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Find Your Missing.....</title>
+        {% load staticfiles %}
+        <link rel="icon" type="image/gif/png" href="{% static 'home/assets/images/icons/search.ico'%}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Fonts Link -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+
+        <!-- Bootstrap CSS Link -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+        <!-- CSS -->
+        <link href="{% static 'home/css/home.css' %}" rel="stylesheet" type="text/css">
+
+        <!-- JS -->
+        <script src="{% static 'home/assets/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery-1.12.0.min.js' %}"></script>
+    </head>
+
+    <body background="{% static 'home/assets/3.png' %}">
+
+        <!--NavBare-->
+       <ul class="navBar">
+
+
+            <li class="selected">
+                <a href="home">Home</a>
+            </li>
+            <li>
+                <a href="about">About</a>
+            </li>
+            <li>
+                <a href="contact">Contact Us</a>
+            </li>
+            <li>
+                <a href="donate">Donate</a>
+            </li>
+            <li class="liRight">
+                <a href="home/register">Register</a>
+            </li>
+            <li class="liRight">
+                <a href="home/login">Login</a>
+            </li>
+
+        </ul>
+
+
+
+
+
+
+        <center><font color="blue"><h1>Found Person</h1></font></center>
+        <img src = "FoundPerson.FoundPersonImage">
+        <h3>{{ Sex: MissingPerson.Sex }}</h3>
+        <h3>{{ Found In: FoundPerson.FoundIn }}</h3>
+        <h3>{{ Found Date: FoundPerson.FoundDate }}</h3>
+        <h3>{{ Current Location: FoundPerson.FoundLocation }}</h3>
+        <p>{{ Details: FoundPerson.Details }}</p>
+
+
+
+         <!-- JS -->
+        <script src="{% static 'home/assets/js/plugins/animate-headline.js' %}"></script>
+        <script src="{% static 'home/assets/js/main.js' %}"></script>
+
+         <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+

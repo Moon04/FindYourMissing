@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Here We Are</title>
+	<meta name="description" content="Cardio is a free one page template made exclusively for Codrops by Luka Cvetinovic" />
+	<meta name="keywords" content="html template, css, free, one page, gym, fitness, web design" />
+	<meta name="author" content="Luka Cvetinovic for Codrops" />
+
+	<!-- Favicons (created with http://realfavicongenerator.net/)-->
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="img/favicons/manifest.json">
+	<link rel="shortcut icon" href="img/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#00a8ff">
+	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Normalize -->
+	{% load staticfiles %}
+	<link rel="icon" type="image/gif/png" href="{% static 'home/assets/images/icons/search.ico'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/normalize.css'%}">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap.css'%}">
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/owl.css'%}">
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/animate.css'%}">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="{% static 'home/fonts/font-awesome-4.1.0/css/font-awesome.min.css'%}">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" type="text/css" href="{% static 'home/fonts/eleganticons/et-icons.css'%}">
+	<!-- Main style -->
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/Alogedin.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/navbar.css'%}">
+
+</head>
+
+<body>
+	<!--NavBare-->
+	<div>
+	       <ul class="navBar">
+
+	            <li class="selected">
+	                <a href="^{% url  'home:home' %}">Home</a>
+	            </li>
+	            <li>
+	                <a href="about">About</a>
+	            </li>
+	            <li>
+	                <a href="contact">Contact Us</a>
+	            </li>
+	            <li>
+	                <a href="donate">Donate</a>
+	            </li>
+			   <li class="liRight">
+				   <a href="{% url  'home:home' %}">Log Out</a>
+			   </li>
+
+	        </ul>
+        </div>
+
+
+        <!--<div class="img">
+        	<img src="1.jpg">
+        </div>-->
+
+   <div class="elKber">
+	<div class="row services">
+				<div class="col-md-3">
+					<div class="service">
+						<div class="icon-holder">
+							<img src="{% static 'home/assets/images/icons/dna copy.png'%}" alt="" class="icon">
+						</div>
+						<h4 class="heading">My child is missing</h4>
+						<p class="description">y Rab nla2eh 🙈👐😇</p>
+						<br>
+						<a href="{% url 'home:addMissing'%}"><button class="btn">ADD</button></a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="service">
+						<div class="icon-holder">
+							<img src="{% static 'home/assets/images/icons/eye.png'%}" alt="" class="icon">
+						</div>
+						<h4 class="heading">I have sighted a child</h4>
+						<p class="description">Thank You w y Rab ma ytohlak child 2badayn 😇👐</p>
+						<br>
+						<a href="{% url 'home:addFound'%}"><button class="btn">ADD</button></a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="service">
+						<div class="icon-holder">
+							<img src="{% static 'home/assets/images/icons/placeholder-2 copy.png'%}" alt="" class="icon">
+						</div>
+						<h4 class="heading">Found Persons Profiles</h4>
+						<p class="description">La2ehahom b fadl ALLAH 🎉👐😇🌸🎉</p>
+						<br>
+						<a href="{% url 'home:FoundProfiles'%}"><button class="btn">VIEW</button></a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="service">
+						<div class="icon-holder">
+							<img src="{% static 'home/assets/images/icons/placeholder copy.png'%}" alt="" class="icon">
+						</div>
+						<h4 class="heading">List Of Missing</h4>
+						<p class="description">lesa bndawar aho👀 ed3y el Algorithm yshta3'al w myksfnash👐😅😂</p>
+						<br>
+
+						<a href="{% url 'home:MissingProfiles'%}"><button class="btn">VIEW</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	<!-- Scripts -->
+	<script src="{% static 'home/js/Alogedin/jquery-1.11.1.min.js'%}"></script>
+	<script src="{% static 'home/js/Alogedin/owl.carousel.min.js'%}"></script>
+	<script src="{% static 'home/js/Alogedin/js/bootstrap.min.js'%}"></script>
+	<script src="{% static 'home/js/Alogedin/js/wow.min.js'%}"></script>
+	<script src="{% static 'home/js/Alogedin/js/typewriter.js'%}"></script>
+	<script src="{% static 'home/js/Alogedin/js/jquery.onepagenav.js'%}"></script>
+	<script src="{% static 'home/js/Alogedin/js/main.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+    background-color: transparent;
+    height: 60px;
+    font-size: 20px;
+    
+}
+
+li {
+    float: left;
+    text-align: center;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #4CAF50;
+
+}
+
+.liRight{
+  float: right;
+}
+
+

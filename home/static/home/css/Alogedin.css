@@ -1,0 +1,100 @@
+
+body{
+	background-image: url("../assets/images/315031-P8RP7E-479.jpg");
+
+}
+.elKber {
+	background-color: #fff;
+	position: absolute;
+	margin: 70px 0;
+}
+.services {
+	margin: 20px 0;
+	
+}
+
+.service {
+	width: 80%;
+	height: 320px;
+	margin: 40px 0;
+	text-align: center;
+	border: 1px solid #ddd;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	background-color: #fff;
+	margin-left: 30px;
+}
+
+.service .icon-holder {
+	position: relative;
+	top: 100px;
+	display: inline-block;
+	margin-bottom: 40px;
+	padding: 10px;
+	background: white;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.service .heading {
+	position: relative;
+	top: 80px;
+	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.service .icon-holder > img.icon {
+	width: 40px;
+}
+
+.service:hover {
+	border-color: #00a8ff;
+}
+
+.service:hover .icon-holder {
+	top: -30px;
+}
+
+.service:hover .heading {
+	top: -30px;
+}
+
+.service .description {
+	width: 80%;
+	margin: 0 auto;
+	opacity: 0;
+	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+}
+
+.service:hover .description {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+.service .btn{
+	
+	width: 40%;
+	margin: 0 auto;
+	opacity: 0;
+	-webkit-transition: all 600ms cubic-bezier(0.5, 0.55, 0.265, 1.55);
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	
+}
+.service:hover .btn {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+.img{
+	position: relative;
+}
+
