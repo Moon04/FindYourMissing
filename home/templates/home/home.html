@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <title>Find Your Missing.....</title>
-        {% load staticfiles %}
-        <link rel="icon" type="image/gif/png" href="{% static 'home/assets/images/icons/search.ico'%}">
+        {% load static %}
+        <link rel="icon" type="image/gif/png" href="{% static 'peep1/assets/images/icons/search.png'%}">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Fonts Link -->
@@ -12,12 +12,17 @@
         <!-- Bootstrap CSS Link -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
+
+
         <!-- CSS -->
-        <link href="{% static 'home/css/home.css' %}" rel="stylesheet" type="text/css">
+        {% load static %}
+        <link href="{% static 'peep1/css/home.css' %}" rel="stylesheet" type="text/css">
 
         <!-- JS -->
-        <script src="{% static 'home/assets/js/vendor/modernizr-2.8.3.min.js' %}"></script>
-        <script src="{% static 'home/assets/js/vendor/jquery-1.12.0.min.js' %}"></script>
+        {% load static %}
+        <script src="{% static 'peep1/assets/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+        {% load static %}
+        <script src="{% static 'peep1/assets/js/vendor/jquery-1.12.0.min.js' %}"></script>
     </head>
 
     <body>
@@ -26,22 +31,24 @@
        <ul class="navBar">
 
             <li class="selected">
-                <a href="{% url  'home:home' %}">Home</a>
+                <a href="about">Home</a>
             </li>
             <li>
-                <a href="about">About</a>
+                <a href="gallery">About</a>
             </li>
+
             <li>
                 <a href="contact">Contact Us</a>
             </li>
             <li>
-                <a href="donate">Donate</a>
+                <a href="web1">Donate</a>
             </li>
             <li class="liRight">
-                <a href="{% url 'home:register' %}">Register</a>
+                {%load admin_urls%}
+                <a href="register">Register</a>
             </li>
             <li class="liRight">
-                <a href="{% url 'home:login' %}">Login</a>
+                <a href="login">Login</a>
             </li>
 
         </ul>
@@ -54,7 +61,8 @@
             <section class="hero-section hero-section--image clearfix clip">
                 <div class="hero-section__wrap">
                     <div class="hero-section__option">
-                        <img src="{% static 'home/assets/1.jpg' %}" alt="Hero section image">
+                        {% load static %}
+                        <img src="{% static 'peep1/assets/1.jpg' %}" alt="Hero section image">
                     </div>
                     <!-- .hero-section__option -->
 
@@ -73,8 +81,8 @@
                                     <div class="title__description">Sometimes, Only one person is missing,<br> and the whole WORLD seems depopulated...</div>
 
                                     <!-- Options btn color: .btn-success | .btn-info | .btn-warning | .btn-danger | .btn-primary -->
-                                    <div class="title__action"><a href="{% url 'home:register' %}" class="btn btn-success">Register</a></div>
-                                    <div class="title__action"><a href="{% url 'home:login' %}" class="btn btn-success">Login</a></div>
+                                    <div class="title__action"><a href="register" class="btn btn-success">Register</a></div>
+                                    <div class="title__action"><a href="login" class="btn btn-success">Login</a></div>
                                 </div> <!-- .title-01 -->
                             </div>
                         </div>
@@ -87,8 +95,10 @@
 
 
         <!-- JS -->
-        <script src="{% static 'home/assets/js/plugins/animate-headline.js' %}"></script>
-        <script src="{% static 'home/assets/js/main.js' %}"></script>
+        {% load static %}
+        <script src="{% static 'peep1/assets/js/plugins/animate-headline.js' %}"></script>
+        {% load static %}
+        <script src="{% static 'peep1/assets/js/main.js' %}"></script>
 
          <!-- Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
