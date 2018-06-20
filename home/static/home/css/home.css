@@ -134,6 +134,7 @@ img {
 }
 
 @media (min-width: 1200px) {
+  
   .container {
     width: 1170px;
     max-width: 100%;
@@ -2597,7 +2598,7 @@ xclip
     padding: 0;
 
     overflow: hidden;
-    background-color: transparent;
+    background-color: #fff;
     height: 60px;
     font-size: 20px;
 
